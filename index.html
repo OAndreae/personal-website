@@ -32,8 +32,8 @@
       Software Engineer. Web Designer. Technology Consultant.
     </p>
     <div class="actions">
-      <a class="btn btn-primary" href="mailto:oliver@oliverandreae.com">Contact Me</a>
-      <a class="btn btn-secondary" href="https://www.linkedin.com/in/oliver-andreae" target="_blank"
+      <a class="btn btn-primary" id="contact-btn" href="mailto:oliver@oliverandreae.com">Contact Me</a>
+      <a class="btn btn-secondary" id="linkedin-btn" href="https://www.linkedin.com/in/oliver-andreae" target="_blank"
         rel="noopener noreferrer">View LinkedIn</a>
     </div>
   </main>
@@ -44,6 +44,14 @@
       Data rights: <a href="mailto:oliver@oliverandreae.com">oliver@oliverandreae.com</a>
     </p>
   </footer>
+  <script>
+    document.getElementById('contact-btn')?.addEventListener('click', () => {
+      posthog.capture('contact_me_clicked', { destination: 'mailto' });
+    });
+    document.getElementById('linkedin-btn')?.addEventListener('click', () => {
+      posthog.capture('linkedin_clicked', { destination: 'external' });
+    });
+  </script>
 </body>
 
 </html>
