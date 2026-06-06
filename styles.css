@@ -98,6 +98,32 @@ body {
   border-color: #111827;
 }
 
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #9ca3af;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: #6b7280;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-footer a:hover {
+  color: #374151;
+}
+
 @media (max-width: 480px) {
   .profile-photo {
     width: 140px;
